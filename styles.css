@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+/* ============== general ============== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body,
+footer,
+footer div,
+.count_down,
+.count_down_item,
+.count_down_item span {
+  display: flex;
+}
+body {
+  width: auto;
+  height: 100vh;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: 'Red Hat Text', sans-serif;
+  text-transform: uppercase;
+  background-color: hsl(235, 16%, 14%);
+  background-image: url(./images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.3em;
+}
+
+/* ==============  count down section ============== */
+
+.count_down {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10em 2em;
+  padding: 10em;
+}
+
+.count_down_item {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.count_down_item p {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: hsl(237, 18%, 59%);
+}
+
+.count_down_item span {
+  width: 190px;
+  background-color: hsl(236, 21%, 26%);
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  font-size: 5em;
+  font-weight: 700;
+  color: #fb6087;
+  box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
+  position: relative;
+}
+.count_down_item span b {
+  transition: all cubic-bezier(0.15, 0.45, 0.28, 1) 0.6s;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: center;
+}
+
+.animate_text {
+  animation-name: fliptext;
+  animation-timing-function: cubic-bezier(0.15, 0.45, 0.28, 1);
+  animation-duration: 570ms;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.count_down_item span::before {
+  animation-duration: 570ms;
+}
+.count_down_item span::after {
+  animation-duration: 570ms;
+}
+.count_down_item span::before,
+.count_down_item span::after {
+  width: 190px;
+  height: 50%;
+  content: ' ';
+  position: absolute;
+  animation-timing-function: cubic-bezier(0.15, 0.45, 0.28, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-style: preserve-3d;
+}
+.count_down_item span::before {
+  top: 0px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: hsl(237, 20%, 23%);
+  transform-origin: center bottom;
+}
+.count_down_item span::after {
+  bottom: 0px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: hsl(236, 21%, 26%);
+  transform-origin: center top;
+}
+
+.count_down_item span.animate::before {
+  animation-name: fliptop;
+}
+
+.count_down_item span.animate::after {
+  animation-name: flipbottom;
+}
+
+@keyframes fliptop {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-90deg);
+    background-color: hsl(236, 21%, 26%);
+  }
+}
+
+@keyframes flipbottom {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes fliptext {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(90deg);
+  }
+}
+
+.count_down_item span hr {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  border-style: inset;
+  border-width: 1px;
+  border-color: hsl(236, 21%, 26%);
+}
+
+/* ============== footer  ============== */
+footer {
+  width: 100%;
+  height: 30vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-image: url(./images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer,
+footer a {
+  color: hsl(237, 18%, 59%);
+  text-decoration: none;
+}
+footer a {
+  font-weight: 700;
+}
+
+footer div {
+  margin-top: 5em;
+  width: 7%;
+  justify-content: space-between;
+}
+
+footer img:hover {
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(54%) sepia(14%) saturate(6801%) hue-rotate(312deg) brightness(104%) contrast(97%);
+}

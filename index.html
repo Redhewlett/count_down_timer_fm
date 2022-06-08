@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Launch countdown timer</title>
+    <title>Frontend Mentor | Launch countdown timer</title>
+  </head>
+  <body>
+    <div class="count_down">
+      <h1>We're launching soon</h1>
+      <!-- days -->
+      <div class="count_down_item">
+        <span id="days">
+          <hr />
+          <b id="days_count"></b>
+        </span>
+        <p>Days</p>
+      </div>
+      <!-- hours -->
+      <div class="count_down_item">
+        <span id="hours">
+          <hr />
+          <b id="hours_count"></b>
+        </span>
+        <p>Hours</p>
+      </div>
+      <!-- minutes -->
+      <div class="count_down_item">
+        <span id="minutes">
+          <hr />
+          <b id="minutes_count"></b>
+        </span>
+        <p>Minutes</p>
+      </div>
+      <!-- seconds -->
+      <div class="count_down_item">
+        <span id="seconds">
+          <hr />
+          <b id="seconds_count"></b>
+        </span>
+        <p>Seconds</p>
+      </div>
+    </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <footer class="footer">
+      <div>
+        <img src="./images/icon-facebook.svg" alt="facebook_icon" />
+        <img src="./images/icon-pinterest.svg" alt="pinterest_icon" />
+        <img src="./images/icon-instagram.svg" alt="instagram_icon" />
+      </div>
+      <p>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> Coded by
+        <a href="https://github.com/Redhewlett/" target="_blank">Redhewlett</a>.
+      </p>
+    </footer>
 
-  We're launching soon
-
-  Days
-  Hours
-  Minutes
-  Seconds
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="app.js" />
+  </body>
 </html>
