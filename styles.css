@@ -69,86 +69,7 @@ h1 {
   color: #fb6087;
   box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
   position: relative;
-}
-.count_down_item span b {
-  transition: all cubic-bezier(0.15, 0.45, 0.28, 1) 0.6s;
-  transform-style: preserve-3d;
-  z-index: 1;
-  transform-origin: center;
-}
-
-.animate_text {
-  animation-name: fliptext;
-  animation-timing-function: cubic-bezier(0.15, 0.45, 0.28, 1);
-  animation-duration: 570ms;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
-
-.count_down_item span::before {
-  animation-duration: 570ms;
-}
-.count_down_item span::after {
-  animation-duration: 570ms;
-}
-.count_down_item span::before,
-.count_down_item span::after {
-  width: 190px;
-  height: 50%;
-  content: ' ';
-  position: absolute;
-  animation-timing-function: cubic-bezier(0.15, 0.45, 0.28, 1);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  transform-style: preserve-3d;
-}
-.count_down_item span::before {
-  top: 0px;
-  border-radius: 10px 10px 0px 0px;
-  background-color: hsl(237, 20%, 23%);
-  transform-origin: center bottom;
-}
-.count_down_item span::after {
-  bottom: 0px;
-  border-radius: 0px 0px 10px 10px;
-  background-color: hsl(236, 21%, 26%);
-  transform-origin: center top;
-}
-
-.count_down_item span.animate::before {
-  animation-name: fliptop;
-}
-
-.count_down_item span.animate::after {
-  animation-name: flipbottom;
-}
-
-@keyframes fliptop {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(-90deg);
-    background-color: hsl(236, 21%, 26%);
-  }
-}
-
-@keyframes flipbottom {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(90deg);
-  }
-}
-
-@keyframes fliptext {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(90deg);
-  }
+  overflow: hidden;
 }
 
 .count_down_item span hr {
@@ -160,6 +81,25 @@ h1 {
   border-style: inset;
   border-width: 1px;
   border-color: hsl(236, 21%, 26%);
+}
+
+.count_down_item span::before,
+.count_down_item span::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  content: ' ';
+  background-color: hsl(234, 17%, 12%);
+  position: absolute;
+  top: 48%;
+  z-index: 3;
+}
+.count_down_item span::before {
+  left: -5px;
+}
+
+.count_down_item span::after {
+  right: -5px;
 }
 
 /* ============== footer  ============== */

@@ -1,0 +1,93 @@
+/* delete most of the repeating code, maybe it's not a good practice tho', what if the other css file disapear? i'll think about this */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+h1 {
+  width: 100%;
+  height: 55vw;
+  font-size: 4vw;
+  padding: 0em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==============  count down section ============== */
+
+.count_down {
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0vw 0vw;
+  padding: 0em 2em;
+}
+
+.count_down_item {
+  width: 10vw;
+  height: 40vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.count_down_item p {
+  font-size: 2.3vw;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: hsl(237, 18%, 59%);
+}
+
+.count_down_item span {
+  width: 20vw;
+  height: 20vw;
+  padding: 0.2em 0.5em;
+  font-size: 10vw;
+}
+
+.count_down_item span hr {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  border-style: inset;
+  border-width: 0.1vw;
+  border-color: hsl(236, 21%, 26%);
+}
+
+.count_down_item span::before,
+.count_down_item span::after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  content: ' ';
+  background-color: hsl(234, 17%, 12%);
+  position: absolute;
+  top: 46%;
+  z-index: 3;
+}
+.count_down_item span::before {
+  left: -4px;
+}
+
+.count_down_item span::after {
+  right: -4px;
+}
+
+/* ============== footer  ============== */
+
+footer div {
+  margin-top: 5em;
+  width: 40%;
+  justify-content: space-between;
+}
+
+footer p {
+  text-align: center;
+}
