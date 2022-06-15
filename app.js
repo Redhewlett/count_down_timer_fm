@@ -1,5 +1,14 @@
 // Set the date we're counting down to
-const countDownDate = new Date('Jun 18, 2022 17:11:00').getTime()
+var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+var today = new Date()
+var dd = today.getDate()
+var mm = today.getMonth() + 1 //January is 0!
+var yyyy = today.getFullYear()
+// today = dd + '/' + mm + '/' + yyyy
+
+//we count 8 days from today this year and month, meaning this will run forever withou me having to reset a time
+//or having to put a function for when it reaches 0.
+const countDownDate = new Date(`${month[mm - 1]} ${dd + 8}, ${yyyy} 17:11:00`).getTime()
 //Select our target in the html
 const daysHtml = document.getElementById('days_count')
 const hoursHtml = document.getElementById('hours_count')
